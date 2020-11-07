@@ -1,2 +1,2 @@
-# USK-1
+# USK
 Source Code Latihan USK C++
