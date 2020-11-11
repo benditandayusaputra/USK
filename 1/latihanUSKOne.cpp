@@ -1,6 +1,5 @@
 #include <conio.h>
 #include <iostream>
-#include <string>
 using namespace std;
 
 struct data {
@@ -18,13 +17,11 @@ void inputData()
 {
     cout<<"\n Jumlah Data Yang Akan Di Input : "; cin>>b;
 
-    d = 1;
-
     for( c = 0; c < b; c++ ) {
         d++;
         cout<<"\nData Ke-"<<d<<endl;
         cout<<"NIS\t: ";
-        cin.getline(batas[a].nis, sizeof(batas[a].nis));
+        cin>>batas[a].nis;
         cout<<"Nama\t: ";
         cin>>batas[a].nama;
         cout<<"Kelas\t: ";
@@ -130,19 +127,19 @@ int main()
             inputData();
             goto awal;
             break;
-         case 2 :
+         case 2:
             hapusData();
             goto awal;
             break;
-         case 3 :
+         case 3:
             lihatData();
             goto awal;
             break;
-         case 4 :
+         case 4:
             editData();
             goto awal;
             break;
-         case 5 :
+         case 5:
              cout<<"\n\nApakah Yakin Keluar Dari Program...??\n\n";
              cout<<"\t[Y]\t[N]\n\n";
              cin>>confirm;
@@ -153,7 +150,7 @@ int main()
                 goto awal;
              }
             break;
-         default :
+         default:
             goto awal;
         }
 }
